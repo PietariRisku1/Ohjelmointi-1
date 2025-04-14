@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lajitteluhattu</title>
+</head>
+<body>
+    <h1>Tervetuloa Tylypahkaan!</h1>
+    <p id="tulos"></p>
+
+    <script>
+        const nimi = prompt("Mika on sinun nimesi?");
+        const satunnainenNumero = Math.floor(Math.random() * 4) + 1;
+
+        let tupa;
+
+        if (satunnainenNumero === 1) {
+            tupa = "Rohkelikko";
+        } else if (satunnainenNumero === 2) {
+            tupa = "Luihuinen";
+        } else if (satunnainenNumero === 3) {
+            tupa = "Puuskupuh";
+        } else {
+            tupa = "Korpinkynsi";
+        }
+
+        const tulos = document.getElementById("tulos");
+        tulos.innerHTML = `<strong>${nimi}</strong>, sinut on lajiteltu tupaan <strong>${tupa}</strong>!`;
+    </script>
+</body>
+</html>

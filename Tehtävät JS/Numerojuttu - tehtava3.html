@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numerojuttu - tehtava3</title>
+</head>
+<body>
+    <h1>Numerojuttu tehtava 3</h1>
+    <p id="output"></p>
+
+    <script>
+        const num1 = parseInt(prompt("Anna ensimmainen kokonaisluku:"));
+        const num2 = parseInt(prompt("Anna toinen kokonaisluku:"));
+        const num3 = parseInt(prompt("Anna kolmas kokonaisluku:"));
+
+        const sum = num1 + num2 + num3;
+        const product = num1 * num2 * num3;
+        const average = sum / 3;
+
+        const output = document.getElementById("output");
+        output.innerHTML = `
+            <strong>Syotetyt luvut:</strong> ${num1}, ${num2}, ${num3}<br>
+            <strong>Summa:</strong> ${sum}<br>
+            <strong>Tulo:</strong> ${product}<br>
+            <strong>Keskiarvo:</strong> ${average.toFixed(2)}
+        `;
+    </script>
+</body>
+</html>
