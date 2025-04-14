@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karkausvuodet</title>
+</head>
+<body>
+
+<h3>Karkausvuosien tulostus</h3>
+
+<p>Alkuvuosi: <input id="alku"></p>
+<p>Loppuvuosi: <input id="loppu"></p>
+<p><button onclick="tulosta()">OK</button></p>
+
+<ul id="lista"></ul>
+
+<script>
+  function onkoKarkausvuosi(vuosi) {
+    return (vuosi % 4 === 0 && vuosi % 100 !== 0) || (vuosi % 400 === 0);
+  }
+
+  function tulosta() {
+    let alku = parseInt(document.getElementById("alku").value);
+    let loppu = parseInt(document.getElementById("loppu").value);
+    let ul = document.getElementById("lista");
+    ul.innerHTML = ""; // tyhjennetaan aiemmat tulokset
+
+    for (let vuosi = alku; vuosi <= loppu; vuosi++) {
+      if (onkoKarkausvuosi(vuosi)) {
+        let li = document.createElement("li");
+        li.textContent = vuosi;
+        ul.appendChild(li);
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
