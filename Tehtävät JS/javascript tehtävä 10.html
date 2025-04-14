@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Noppa</title>
+</head>
+<body>
+
+<h3>Simulointi</h3>
+
+<p>Noppien maara: <input id="nopat"></p>
+<p>Summa: <input id="summa"></p>
+<p><button onclick="simuloi()">OK</button></p>
+
+<p id="tulos"></p>
+
+<script>
+  function heittoja(n) {
+    let summa = 0;
+    for (let i = 0; i < n; i++) {
+      summa += Math.floor(Math.random() * 6) + 1;
+    }
+    return summa;
+  }
+
+  function simuloi() {
+    let noppia = parseInt(document.getElementById("nopat").value);
+    let tavoite = parseInt(document.getElementById("summa").value);
+    let kertoja = 10000;
+    let osumat = 0;
+
+    for (let i = 0; i < kertoja; i++) {
+      if (heittoja(noppia) === tavoite) {
+        osumat++;
+      }
+    }
+
+    let todennakoisyys = (os
