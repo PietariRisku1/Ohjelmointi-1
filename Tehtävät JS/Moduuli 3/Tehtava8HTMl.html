@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tehtävä 8 – Laskin</title>
+</head>
+<body>
+  <h1>Yksinkertainen laskin</h1>
+
+  <input type="number" id="luku1" placeholder="Ensimmäinen luku">
+  <input type="number" id="luku2" placeholder="Toinen luku">
+
+  <select id="operaatio">
+    <option value="summa">Yhteenlasku</option>
+    <option value="erotus">Vähennyslasku</option>
+    <option value="tulo">Kertolasku</option>
+    <option value="jako">Jakolasku</option>
+  </select>
+
+  <button onclick="laske()">Laske</button>
+
+  <p id="result">Tulos näkyy tässä</p>
+
+  <script src="Tehtava8.js"></script>
+</body>
+</html>
